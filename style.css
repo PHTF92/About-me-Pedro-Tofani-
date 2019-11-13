@@ -1,0 +1,21 @@
+body {
+    background-color: darkgrey;
+  }
+  #name {
+    font-family: Helvetica, sans-serif;
+  }
+  .description {
+    font-family: Arial, serif;
+  }
+  em {
+    text-decoration: underline;
+  }
+  strong {
+    letter-spacing: 4px;
+  }
+  .li1 {
+    font-size: 15px;
+    }
+  .li2 {
+      font-size: 20px;
+    }
