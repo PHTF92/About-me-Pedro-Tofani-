@@ -49,3 +49,7 @@ body {
   .li2 {
       font-size: 20px;
     }
+  .topic {
+    border: 2px solid black;
+    margin: 3px;
+  }
