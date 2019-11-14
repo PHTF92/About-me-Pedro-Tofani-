@@ -1,5 +1,5 @@
 body {
-    background-color: darkgrey;
+    background-color: rgb(175, 175, 252);
     box-sizing: border-box;
   }
   #name {
@@ -26,6 +26,9 @@ body {
   }
   #picture {
     width: 35%;
+    background-color: rgb(84, 84, 167);
+    padding: 35px;
+    border: 1px solid;
   }
   .description {
     font-family: Arial, serif;
