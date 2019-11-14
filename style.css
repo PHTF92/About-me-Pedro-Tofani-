@@ -30,7 +30,6 @@ body {
     background-color: rgb(84, 84, 167);
     padding: 35px;
     border: 1px solid;
-    transform: rotate(90deg);
   }
   .description {
     font-family: Arial, serif;
