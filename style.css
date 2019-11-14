@@ -1,8 +1,31 @@
 body {
     background-color: darkgrey;
+    box-sizing: border-box;
   }
   #name {
     font-family: Helvetica, sans-serif;
+    border: 1px solid;
+    text-align: center
+  }
+  .begin {
+    border: 1px solid;
+    padding: 5px;
+    display: flex;
+  }
+  .begin-left {
+    border: 1px solid;
+    padding: 5px;
+    width: 50%;
+    margin: 1px;
+  }
+  .begin-right {
+    border: 1px solid;
+    padding: 5px;
+    width: 50%;
+    margin: 1px;
+  }
+  #picture {
+    width: 35%;
   }
   .description {
     font-family: Arial, serif;
