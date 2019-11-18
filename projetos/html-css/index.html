@@ -78,7 +78,6 @@
     background-color: rgb(179, 209, 179);
     list-style: none;
     margin: 0;
-    border: solid;
   }
 
   header {
@@ -90,6 +89,27 @@
 
   section.conteudo {
     margin-top: 150px;
+  }
+
+  .tabela {
+    margin: 10px;
+    justify-content: center;
+    width: 80%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  th {
+    border: solid black;
+  }
+
+  tr {
+    border: solid black;
+    background-color: rgb(230, 217, 154);
+  }
+
+  td {
+    border: solid black;
   }
 </style>
 
@@ -122,7 +142,7 @@
         <em>Campeonato Brasileiro</em>.
       </p>
       <h2 id="campeoes">Campeões ano a ano</h2>
-      <table>
+      <table class="tabela teste" cellpadding="5px" cellspacing="0">
         </tr>
         <tr>
           <th>Ano</th>
