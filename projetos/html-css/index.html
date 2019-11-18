@@ -10,6 +10,7 @@
     margin: 0;
     border: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   .titulo-pagina {
@@ -34,7 +35,7 @@
 
   .conteudo {
     display: flex;
-    margin: 5px;
+    margin: 0px 5px;
   }
 
   .lateral {
@@ -43,7 +44,6 @@
     width: 250px;
     padding: 5px;
     margin: 0px 5px;
-    border:
   }
 
   .conteudo-principal {
@@ -71,30 +71,53 @@
     display: flex;
     justify-content: center;
   }
+
+  .navegacao ul {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(179, 209, 179);
+    list-style: none;
+    margin: 0;
+    border: solid;
+  }
+
+  header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  section.conteudo {
+    margin-top: 150px;
+  }
 </style>
 
 <body>
-  <header class="header">
-    <section class="titulo-pagina">
-      <h1 id="inicio">Campeonato Brasileiro</h1>
-      <h4>Informações interessantes para você que é viciado no campeonato mais emocionante do mundo</h4>
-    </section>
-    <nav class="navegação">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#campeoes">Todos os campeões!</a></li>
-        <li><a href="#vices">Todos os vice-campeões!</a></li>
-        <li><a href="#trybe">Nossos patrocinadores!</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div>
+    <header class="fixo">
+      <section class="titulo-pagina">
+        <h1 id="inicio">Campeonato Brasileiro</h1>
+        <h4>Informações interessantes para você que é viciado no campeonato mais emocionante do mundo</h4>
+      </section>
+      <nav class="navegacao">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#campeoes">Todos os campeões!</a></li>
+          <li><a href="#vices">Todos os vice-campeões!</a></li>
+          <li><a href="#trybe">Nossos patrocinadores!</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
   <section class="conteudo">
     <section class="conteudo-principal">
       <h2 id="home">Início</h2>
       <p>Esta página contém algumas informações sobre o <strong>Campeonato Brasileiro</strong>.</p>
       <p>Nela encontraremos os campeões ano a ano, os maiores vices (rs) e links de reportagens dos últimos campeões.
       </p>
-      <p>Importante ressaltar que os dados aqui compilados só constam a partir de 1971, quando a competição passou a se
+      <p>Importante ressaltar que os dados aqui compilados só constam a partir de 1971, quando a competição passou a
+        se
         chamar
         <em>Campeonato Brasileiro</em>.
       </p>
@@ -355,7 +378,8 @@
         <li>Vasco (1974, 1989, 1997, 2000) - 4</li>
         <li>Cruzeiro (2003, 2013, 2014), Internacional (1975, 1976, 1979) e Fluminense (1984, 2010, 2012) - 3</li>
         <li>Grêmio (1981, 1996) e Santos (2002, 2004) - 2</li>
-        <li>Atlético Mineiro (1971), Atlético Paranaense (2001), Bahia (1988), Botafogo (1995), Coritiba (1985), Guarani
+        <li>Atlético Mineiro (1971), Atlético Paranaense (2001), Bahia (1988), Botafogo (1995), Coritiba (1985),
+          Guarani
           (1978), Sport (1987) - 1</li>
       </ol>
       <h2 id="vices">Maiores vices</h2>
@@ -371,8 +395,8 @@
       </ol>
       <h2>Nossos patrocinadores</h2>
       <div class="teste">
-        <a id="trybe" href="https://www.betrybe.com/" target="_blank"><img
-            src="imagens/trybe.png"></a>
+        <a id="trybe" href="https://www.betrybe.com/" target="_blank"><img src="imagens/trybe.png"
+            alt="Link para Trybe"></a>
       </div>
     </section>
     <aside class="links-para-campeoes">
