@@ -4,12 +4,45 @@
 <head>
   <title>Brasileirão</title>
 </head>
+<style>
+  body {
+    background-color: #F7FFF7;
+  }
+
+  h2 {
+    border: solid thick;
+    background-color: #FFE66D;
+  }
+
+  .conteudo {
+    display: flex;
+  }
+
+  .lateral {
+    border: black solid 1px;
+    border-width: thick;
+    width: 250px;
+    padding: 5px;
+    margin: 0px 5px;
+  }
+
+  .conteudo-principal {
+    border: solid black 1px;
+    border-width: thick;
+    padding: 5px;
+    width: 95%;
+  }
+
+  #home {
+    margin-top: 0px;
+  }
+</style>
 
 <body>
   <header class="header">
     <section class="titulo-pagina">
       <h1 id="inicio">Campeonato Brasileiro</h1>
-      <h2>Informações interessantes para você que é viciado no campeonato mais emocionante do mundo</h2>
+      <h4>Informações interessantes para você que é viciado no campeonato mais emocionante do mundo</h4>
     </section>
     <nav class="navegação">
       <ul>
@@ -302,17 +335,20 @@
       </ol>
     </section>
     <aside class="links-para-campeoes">
-      <h3>Links para os últimos campeões!</h3>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=bPDIHUkTzCg" target="_blank">2018 - Palmeiras</a></li>
-        <li><a href="https://www.youtube.com/watch?v=Afeg8dAMc6w" target="_blank">2017 - Corinthians</a></li>
-        <li><a href="https://www.youtube.com/watch?v=TLemzeL3AVo" target="_blank">2016 - Palmeiras</a></li>
-        <li><a href="https://www.youtube.com/watch?v=krglhtAtgmU" target="_blank">2015 - Corinthians</a></li>
-        <li><a href="https://www.youtube.com/watch?v=ZYMY72A72tM" target="_blank">2014 - Cruzeiro</a></li>
-        <li><a href="https://www.youtube.com/watch?v=CoKMWXH_LHc" target="_blank">2013 - Cruzeiro</a></li>
-      </ul>
+      <div class="lateral">
+        <h3>Links para os últimos campeões!</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=bPDIHUkTzCg" target="_blank">2018 - Palmeiras</a></li>
+          <li><a href="https://www.youtube.com/watch?v=Afeg8dAMc6w" target="_blank">2017 - Corinthians</a></li>
+          <li><a href="https://www.youtube.com/watch?v=TLemzeL3AVo" target="_blank">2016 - Palmeiras</a></li>
+          <li><a href="https://www.youtube.com/watch?v=krglhtAtgmU" target="_blank">2015 - Corinthians</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ZYMY72A72tM" target="_blank">2014 - Cruzeiro</a></li>
+          <li><a href="https://www.youtube.com/watch?v=CoKMWXH_LHc" target="_blank">2013 - Cruzeiro</a></li>
+        </ul>
+      </div>
     </aside>
   </section>
   <footer>
     <p><a href="#inicio">Voltar ao topo!</a></p>
   </footer>
+</body>
