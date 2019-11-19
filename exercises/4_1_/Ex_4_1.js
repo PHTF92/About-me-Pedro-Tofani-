@@ -28,3 +28,16 @@ let numero = -2;
 if (numero > 0) { console.log("Positive") }
 else if (numero < 0) { console.log("Negative") }
 else if (numero == 0) { console.log("Zero") }
+
+//Exercício 5
+let e = 90;
+let f = 45;
+let g = 40;
+triang = undefined
+
+if (e + f + g == 180) { triang = true }
+else {
+    triang = false;
+    console.log("Erro")
+}
+console.log(triang)
