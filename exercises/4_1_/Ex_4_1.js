@@ -25,6 +25,6 @@ else { console.log(d, 'é maior que', c) }
 
 //Exercício 4
 let numero = -2;
-if (numero > 0) {console.log("Positive")}
-else if (numero < 0) {console.log("Negative")}
-else if (numero == 0){console.log("Zero")}
+if (numero > 0) { console.log("Positive") }
+else if (numero < 0) { console.log("Negative") }
+else if (numero == 0) { console.log("Zero") }
