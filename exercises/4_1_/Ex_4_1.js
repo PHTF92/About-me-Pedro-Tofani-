@@ -76,3 +76,13 @@ else if (nota < 80 && nota >= 70) { console.log("C") }
 else if (nota < 70 && nota >= 60) { console.log("D") }
 else if (nota < 60 && nota >= 50) { console.log("E") }
 else { console.log("F") }
+
+//Exercício 8
+let n1 = 11;
+let n2 = 21;
+let n3 = 23;
+
+if ((n1 % 2 == 0 && n2 % 2 != 0 && n3 % 2 != 0) || (n1 % 2 != 0 && n2 % 2 == 0 && n3 % 2 != 0) || (n1 % 2 != 0 && n2 % 2 != 0 && n3 % 2 == 0)){
+    console.log(true);
+}
+else (console.log(false));
