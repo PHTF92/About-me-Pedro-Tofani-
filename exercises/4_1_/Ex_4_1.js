@@ -82,7 +82,7 @@ let n1 = 11;
 let n2 = 21;
 let n3 = 23;
 
-if ((n1 % 2 == 0 && n2 % 2 != 0 && n3 % 2 != 0) || (n1 % 2 != 0 && n2 % 2 == 0 && n3 % 2 != 0) || (n1 % 2 != 0 && n2 % 2 != 0 && n3 % 2 == 0)){
+if ((n1 % 2 == 0 && n2 % 2 != 0 && n3 % 2 != 0) || (n1 % 2 != 0 && n2 % 2 == 0 && n3 % 2 != 0) || (n1 % 2 != 0 && n2 % 2 != 0 && n3 % 2 == 0)) {
     console.log(true);
 }
 else (console.log(false));
@@ -92,7 +92,16 @@ n1 = 12;
 n2 = 22;
 n3 = 23;
 
-if ((n1 % 2 == 0 && n2 % 2 == 0 && n3 % 2 != 0) || (n1 % 2 != 0 && n2 % 2 == 0 && n3 % 2 == 0) || (n1 % 2 == 0 && n2 % 2 != 0 && n3 % 2 == 0)){
+if ((n1 % 2 == 0 && n2 % 2 == 0 && n3 % 2 != 0) || (n1 % 2 != 0 && n2 % 2 == 0 && n3 % 2 == 0) || (n1 % 2 == 0 && n2 % 2 != 0 && n3 % 2 == 0)) {
     console.log(true);
 }
 else (console.log(false));
+
+//exercício 10
+let precoVenda = 140;
+let custo = 100;
+let lucro = 1000 * (precoVenda - 1.2 * custo);
+if (precoVenda < 0 || custo < 0) {
+    console.log("Erro")
+}
+else { console.log(lucro) };
