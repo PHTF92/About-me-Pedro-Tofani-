@@ -41,3 +41,27 @@ else {
     console.log("Erro")
 }
 console.log(triang)
+
+//Exercício 6
+let input = 'PEon';
+let xadrez = input.toLowerCase();
+
+switch (xadrez) {
+    case 'peon':
+        console.log("Foward");
+        break;
+    case 'queen':
+        console.log("All directions");
+        break;
+    case 'bishop':
+        console.log("Diagonal");
+        break;
+    case 'horse':
+        console.log("L");
+        break;
+    case 'tower':
+        console.log("Vertical and horizontal");
+        break;
+    default:
+        console.log("Error");
+}
