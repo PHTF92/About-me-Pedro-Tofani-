@@ -22,3 +22,9 @@ let d = 5;
 if (c == d) { console.log("Os números são iguais") }
 else if (c > d) { console.log(x, "é maior que", d) }
 else { console.log(d, 'é maior que', c) }
+
+//Exercício 4
+let numero = -2;
+if (numero > 0) {console.log("Positive")}
+else if (numero < 0) {console.log("Negative")}
+else if (numero == 0){console.log("Zero")}
