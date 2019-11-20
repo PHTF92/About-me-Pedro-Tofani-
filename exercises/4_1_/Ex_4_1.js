@@ -108,7 +108,7 @@ else { console.log(lucro) };
 
 //Exercício 11
 
-let salarioBruto = 5300;
+let salarioBruto = 3500;
 
 let inssBaixo = 0.08;
 let inssMedio = 0.09;
@@ -123,10 +123,11 @@ let irAlto = [0.275, 869.36];
 
 
 let inss = ((salarioBruto <= 1556.94) ? inssBaixo : ((salarioBruto <= 2594.92) ? inssMedio : ((salarioBruto <= 5189.82) ? inssAlto : inssMaximo)));
-let ir = ((salarioBruto <= 1903.98) ? irIsento : ((salarioBruto <= 2826.65) ? irBaixo : ((salarioBruto <= 3751.05) ? irMedioB : (salarioBruto <= 4664.68) ? irMedioA : irAlto)));
+let salarioBase = salarioBruto - inss*salarioBruto;
+let ir = ((salarioBase <= 1903.98) ? irIsento : ((salarioBase <= 2826.65) ? irBaixo : ((salarioBase <= 3751.05) ? irMedioB : (salarioBase <= 4664.68) ? irMedioA : irAlto)));
 
 
-let salarioLiquido = salarioBruto - ir[0]*salarioBruto + ir[1] - inss*salarioBruto;
+let salarioLiquido = salarioBase - ir[0]*salarioBase + ir[1];
 console.log(salarioLiquido);
 console.log(inss, inss*salarioBruto);
 console.log(ir[0], ir[0]*salarioBruto);
