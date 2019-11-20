@@ -105,3 +105,29 @@ if (precoVenda < 0 || custo < 0) {
     console.log("Erro")
 }
 else { console.log(lucro) };
+
+//Exercício 11
+
+let salarioBruto = 5300;
+
+let inssBaixo = 0.08;
+let inssMedio = 0.09;
+let inssAlto = 0.11;
+let inssMaximo = 570.88 / salarioBruto;
+let irIsento = [0, 0];
+let irBaixo = [0.075, 142.8];
+let irMedioB = [0.15, 354.8];
+let irMedioA = [0.225, 636.13];
+let irAlto = [0.275, 869.36];
+
+
+
+let inss = ((salarioBruto <= 1556.94) ? inssBaixo : ((salarioBruto <= 2594.92) ? inssMedio : ((salarioBruto <= 5189.82) ? inssAlto : inssMaximo)));
+let ir = ((salarioBruto <= 1903.98) ? irIsento : ((salarioBruto <= 2826.65) ? irBaixo : ((salarioBruto <= 3751.05) ? irMedioB : (salarioBruto <= 4664.68) ? irMedioA : irAlto)));
+
+
+let salarioLiquido = salarioBruto - ir[0]*salarioBruto + ir[1] - inss*salarioBruto;
+console.log(salarioLiquido);
+console.log(inss, inss*salarioBruto);
+console.log(ir[0], ir[0]*salarioBruto);
+console.log(ir[1]);
