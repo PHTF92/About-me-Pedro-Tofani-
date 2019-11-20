@@ -28,3 +28,25 @@ for (i; i < n; i++) {
     console.log(linha);
 }
 
+//Exercicio 3
+console.log("");
+console.log("Ex3");
+console.log("");
+n = 5;
+i = 1;
+comprimento = []
+linha = null;
+
+for (i; i <= n; i++) {
+    comprimento = []
+    for (let j = 0; j < n; j++) {
+        if (j < (n - i)) {
+            comprimento.push(' ');
+        }
+        else {
+            comprimento.push('*');
+        }
+    }
+    linha = comprimento.join('');
+    console.log(linha);
+}
