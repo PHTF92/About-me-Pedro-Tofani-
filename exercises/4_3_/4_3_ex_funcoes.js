@@ -37,7 +37,7 @@ console.log("Ex2:");
 console.log("");
 
 function iMaiorValor(arranjo2) {
-    
+
     let valor = [];
     valor = arranjo2;
     let indiceMenor = 0;
@@ -56,7 +56,7 @@ console.log("Ex3:");
 console.log("");
 
 function iMenorValor(arranjo3) {
-    
+
     let valor = [];
     valor = arranjo3;
     let indiceMenor = 0;
@@ -68,4 +68,24 @@ function iMenorValor(arranjo3) {
     return indiceMenor;
 }
 console.log(iMenorValor([1, 3, 60, 4, -5, 3, 52]));
+
+//Exercício 4
+console.log("");
+console.log("Ex4:");
+console.log("");
+
+function iNomeMaior(arranjo4) {
+
+    let nomes = [];
+    nomes = arranjo4;
+    let nomeMaior = 0;
+    let comprimento = nomes.length;
+    for (let i = 0; i < comprimento - 1; i++) {
+        if (nomes[i].length > nomes[i + 1].length && nomes[i].length > nomeMaior) { nomeMaior = nomes[i] }
+        if (nomes[comprimento - 1].length > nomeMaior.length) { nomeMaior = nomes[comprimento - 1] }
+    }
+    return nomeMaior;
+}
+
+console.log(iNomeMaior(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
 
