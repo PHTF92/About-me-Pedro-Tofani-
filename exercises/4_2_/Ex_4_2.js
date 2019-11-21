@@ -95,7 +95,50 @@ for (let i = 2; i < nPrimo; i++) {
     nDivisoes.push(i);
 }
 for (x of nDivisoes) {
-    if (nPrimo % x == 0) {ePrimo = false}
+    if (nPrimo % x == 0) { ePrimo = false }
 }
-if (ePrimo == true) {console.log(nPrimo,'é primo')}
-else {console.log(nPrimo,'não é primo')}
+if (ePrimo == true) { console.log(nPrimo, 'é primo') }
+else { console.log(nPrimo, 'não é primo') }
+
+//Exercício 6
+console.log("");
+console.log("Ex6");
+console.log("");
+
+let algarismo = "MMMMCMXCVIII"
+let arranjo = algarismo.split('');
+let cadaItem;
+let transfEmArabicos = [];
+for (cadaItem of arranjo) {
+    switch (cadaItem) {
+        case 'I':
+            transfEmArabicos.push(1);
+            break;
+        case 'V':
+            transfEmArabicos.push(5);
+            break;
+        case 'X':
+            transfEmArabicos.push(10);
+            break;
+        case 'L':
+            transfEmArabicos.push(50);
+            break;
+        case 'C':
+            transfEmArabicos.push(100);
+            break;
+        case 'D':
+            transfEmArabicos.push(500);
+            break;
+        case 'M':
+            transfEmArabicos.push(1000);
+            break;
+    }
+}
+let resultado = 0;
+let operations = (transfEmArabicos.length - 1);
+for (let index = 0; index < (operations); index++) {
+    if (transfEmArabicos[index] < transfEmArabicos[index + 1]) { resultado -= (transfEmArabicos[index]) }
+    else { resultado += (transfEmArabicos[index]) }
+}
+resultado += transfEmArabicos[(transfEmArabicos.length - 1)];
+console.log (resultado);
