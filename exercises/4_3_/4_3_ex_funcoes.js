@@ -50,3 +50,22 @@ function iMaiorValor(arranjo2) {
 }
 console.log(iMaiorValor([3, 3, 60, 4, 1, 1, 52]));
 
+//Exercício 3
+console.log("");
+console.log("Ex3:");
+console.log("");
+
+function iMenorValor(arranjo3) {
+    
+    let valor = [];
+    valor = arranjo3;
+    let indiceMenor = 0;
+    let comprimento = valor.length;
+    for (let i = 0; i < comprimento - 1; i++) {
+        if (valor[i] < valor[i + 1] && valor[i] < valor[indiceMenor]) { indiceMenor = i }
+        if (valor[comprimento - 1] < valor[indiceMenor]) { indiceMenor = (comprimento - 1) }
+    }
+    return indiceMenor;
+}
+console.log(iMenorValor([1, 3, 60, 4, -5, 3, 52]));
+
