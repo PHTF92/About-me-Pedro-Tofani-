@@ -30,3 +30,23 @@ function verificaPalindrome(palavra) {
     return ePalindromo;
 }
 console.log(verificaPalindrome('arara'));
+
+//Exercício 2
+console.log("");
+console.log("Ex2:");
+console.log("");
+
+function iMaiorValor(arranjo2) {
+    
+    let valor = [];
+    valor = arranjo2;
+    let indiceMenor = 0;
+    let comprimento = valor.length;
+    for (let i = 0; i < comprimento - 1; i++) {
+        if (valor[i] > valor[i + 1] && valor[i] > valor[indiceMenor]) { indiceMenor = i }
+        if (valor[comprimento - 1] > valor[indiceMenor]) { indiceMenor = (comprimento - 1) }
+    }
+    return indiceMenor;
+}
+console.log(iMaiorValor([3, 3, 60, 4, 1, 1, 52]));
+
