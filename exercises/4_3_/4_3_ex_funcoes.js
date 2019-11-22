@@ -99,7 +99,7 @@ function maisVezes(arranjo5) {
     let contagem = 1
     let organizador = [ordenado[0], 1]
     let i = 0;
-    let comprimento = arranjo5.length - 1;
+    let comprimento = arranjo5.length;
     for (i; i < comprimento; i++) {
         if (ordenado[i] == ordenado[i + 1]) contagem += 1;
         else if (organizador[1] < contagem) {
@@ -108,14 +108,9 @@ function maisVezes(arranjo5) {
             contagem = 1;
         }
     }
-    if (organizador[1] < contagem) {
-        organizador[1] = contagem;
-        organizador[0] = ordenado[i];
-        contagem = 1;
-    }
     return (organizador[0]);
 }
-console.log(maisVezes([2, 5, 2, 5, 5, 5, 3, 6]));
+console.log(maisVezes([2, 5, 3, 3, 3, 5, 3, 6]));
 
 //Exercício 6
 console.log("");
