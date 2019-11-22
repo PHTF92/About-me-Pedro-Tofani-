@@ -94,24 +94,25 @@ console.log("");
 console.log("Ex5:");
 console.log("");
 
-let arranjo5 = [2, 5, 2, 5, 5, 5, 3, 6];
-let ordenado = arranjo5.sort();
-console.log(ordenado);
-let contagem = 1
-let organizador = [ordenado[0], 1]
-let i = 0;
-let comprimento = arranjo5.length - 1;
-for (i; i < comprimento; i++) {
-    if (ordenado[i] == ordenado[i + 1]) contagem += 1;
-    else if (organizador[1] < contagem) {
+function maisVezes(arranjo5) {
+    let ordenado = arranjo5.sort();
+    let contagem = 1
+    let organizador = [ordenado[0], 1]
+    let i = 0;
+    let comprimento = arranjo5.length - 1;
+    for (i; i < comprimento; i++) {
+        if (ordenado[i] == ordenado[i + 1]) contagem += 1;
+        else if (organizador[1] < contagem) {
+            organizador[1] = contagem;
+            organizador[0] = ordenado[i];
+            contagem = 1;
+        }
+    }
+    if (organizador[1] < contagem) {
         organizador[1] = contagem;
         organizador[0] = ordenado[i];
         contagem = 1;
     }
+    return (organizador[0]);
 }
-if (organizador[1] < contagem) {
-    organizador[1] = contagem;
-    organizador[0] = ordenado[i];
-    contagem = 1;
-}
-console.log(organizador[0]);
+console.log(maisVezes([2, 5, 2, 5, 5, 5, 3, 6]));
