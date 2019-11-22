@@ -71,6 +71,14 @@
             return trocarh1.innerHTML = texto;
         }
         corrigirTexto("Exercício 4.3 - JavaEscript");
+
+        //Ex 5
+        function paraMaiusculo() {
+            for (let i = 0; i < 3; i++) {
+                document.getElementsByTagName("p")[i].innerHTML = document.getElementsByTagName("p")[i].innerHTML.toUpperCase();
+            }
+        }
+        paraMaiusculo();
     </script>
 </body>
 
