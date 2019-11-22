@@ -59,6 +59,7 @@
 
 <body>
     <script>
+        //Parte 1
         //1 - Adicione a tag h1 com o texto Exercício 4.4 - JavaScript DOM como filho da tag body;
         var tagh1 = document.createElement("h1");
         tagh1.innerHTML = "Exercício 4.4 - JavaScript DOM";
@@ -74,7 +75,20 @@
         tagDiv3.className = "center-content";
         document.querySelector(".main-content").appendChild(tagDiv3);
 
-        //4 - 
+        //4 - Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+        var tagp4 = document.createElement('p');
+        tagp4.innerHTML = "Uma piada pesada e suja: elefante caindo na lama"
+        document.querySelector(".center-content").appendChild(tagp4);
+
+        //5 - Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+        var tagDiv5 = document.createElement('div');
+        tagDiv5.className = "left-content";
+        document.querySelector(".main-content").appendChild(tagDiv5);
+
+        //6 - Adicione a tag div com a classe right-content como filho da tag div criada no passo 2
+        var tagDiv6 = document.createElement('div');
+        tagDiv6.className = "right-content";
+        document.querySelector(".main-content").appendChild(tagDiv6);
 
     </script>
 </body>
