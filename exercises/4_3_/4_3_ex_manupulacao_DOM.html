@@ -42,12 +42,20 @@
         </div>
     </div>
     <script>
-         
- function trocar_p (texto){
-    return document.getElementsByTagName("p")[1].innerHTML = texto;
- }
- trocar_p ("Daqui 5 anos"); 
 
+        //Ex 1 
+        function trocar_p(texto) {
+            var trocarp = document.getElementsByTagName("p")[1];
+            return trocarp.innerHTML = texto;
+        }
+        trocar_p("Daqui 5 anos");
+
+        //Ex 2
+        function trocarVermelho(cor) { 
+            var trocaDeCor = document.getElementsByClassName("main-content")[0];
+            return trocaDeCor.style.backgroundColor = cor;
+        }
+        trocarVermelho("green");
     </script>
 </body>
 
