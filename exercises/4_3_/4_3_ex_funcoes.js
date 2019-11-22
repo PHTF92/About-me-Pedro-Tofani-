@@ -116,3 +116,20 @@ function maisVezes(arranjo5) {
     return (organizador[0]);
 }
 console.log(maisVezes([2, 5, 2, 5, 5, 5, 3, 6]));
+
+//Exercício 6
+console.log("");
+console.log("Ex6:");
+console.log("");
+
+function retornasoma(n) {
+
+    let i = 1;
+    let resultado = 1;
+    while (i < n) {
+        resultado += (i + 1);
+        i++;
+    }
+    return resultado
+}
+console.log(retornasoma(5));
