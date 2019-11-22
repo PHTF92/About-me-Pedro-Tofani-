@@ -51,11 +51,20 @@
         trocar_p("Daqui 5 anos");
 
         //Ex 2
-        function trocarVermelho(cor) { 
+        function trocarVermelho(cor) {
             var trocaDeCor = document.getElementsByClassName("main-content")[0];
             return trocaDeCor.style.backgroundColor = cor;
         }
         trocarVermelho("green");
+
+        //Ex 3
+
+        function trocarBrancoCor(cor) {
+            var trocaDeCor = document.getElementsByClassName("center-content")[0];
+            return trocaDeCor.style.backgroundColor = cor;
+        }
+        trocarBrancoCor("white");
+        
     </script>
 </body>
 
