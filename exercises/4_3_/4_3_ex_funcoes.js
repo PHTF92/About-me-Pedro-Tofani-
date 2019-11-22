@@ -128,3 +128,25 @@ function retornasoma(n) {
     return resultado
 }
 console.log(retornasoma(5));
+
+//Exercício 7
+console.log("");
+console.log("Ex7:");
+console.log("");
+
+function eFinal(word, ending) {
+    let eVerdade = true;
+
+    let arranjoW = word.split('');
+    let arranjoE = ending.split('');
+
+    comparacao = arranjoW.length - arranjoE.length;
+    console.log(comparacao);
+
+    for (let i = 0; i < arranjoE.length; i++) {
+        if (arranjoE[i] == arranjoW[comparacao + i]) continue
+        else eVerdade = false;
+    }
+    return eVerdade;
+}
+console.log (eFinal("Trybe", "be"));
