@@ -90,6 +90,35 @@
         tagDiv6.className = "right-content";
         document.querySelector(".main-content").appendChild(tagDiv6);
 
+        //7 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 
+        //e classe small-image. Esse elemento deve ser filho do div criado no passo 5;
+
+        var img7 = document.createElement('img');
+        img7.src = "https://picsum.photos/200";
+        img7.className = "small-image";
+        document.querySelector(".left-content").appendChild(img7);
+
+        //8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso,
+        //ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do div criado no passo 6
+        
+        let ul8 = document.createElement("ul");
+
+        for (let i = 1; i <= 10; i++) {
+            let elementoLista = document.createElement("li");
+            let text = document.createTextNode(i);
+            elementoLista.appendChild(text);
+            ul8.appendChild(elementoLista); //https://www.w3schools.com/jsref/met_node_appendchild.asp
+        }
+        document.querySelector('.right-content').appendChild(ul8);
+
+        //9 - Adicione 3 tags h3, todas sendo filhas do div criado no passo 2;
+        var tagh3_9_1 = document.createElement("h3");
+        document.querySelector('.main-content').appendChild(tagh3_9_1);
+        var tagh3_9_2 = document.createElement("h3");
+        document.querySelector('.main-content').appendChild(tagh3_9_2);
+        var tagh3_9_3 = document.createElement("h3");
+        document.querySelector('.main-content').appendChild(tagh3_9_3);
+
     </script>
 </body>
 
