@@ -119,6 +119,21 @@
         var tagh3_9_3 = document.createElement("h3");
         document.querySelector('.main-content').appendChild(tagh3_9_3);
 
+        //Parte 2
+        //1 - Adicione a classe title na tag h1 criada;
+        var classh1 = document.getElementsByTagName("h1")[0];
+        classh1.className = "title";
+
+        //2 - Adicione a classe description nas 3 tags h3 criadas;
+        var description1 = document.getElementsByTagName("h3")[0];
+        description1.className = "description";
+        var description2 = document.getElementsByTagName("h3")[1];
+        description2.className = "description";
+        var description3 = document.getElementsByTagName("h3")[2];
+        description3.className = "description";
+
+        //3 - Remova o div criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+        document.querySelector(".main-content").removeChild(document.querySelector(".left-content"));
     </script>
 </body>
 
