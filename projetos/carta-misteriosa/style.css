@@ -1,0 +1,68 @@
+body {
+    background-color: blanchedalmond;
+}
+
+section {
+    margin: 5px;
+    text-align: center;
+}
+
+div {
+    padding: 30px;
+}
+
+.palavraOutput {
+    cursor: pointer;
+}
+
+#bloco {
+    display: flex;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.letraGrande {
+    font-size: 70px;
+}
+
+.letraPequena {
+    font-size: 35px;
+}
+
+.riscar {
+    text-decoration: line-through;
+}
+
+.italico {
+    font-style: italic;
+}
+
+.cinza {
+    background-color: rgb(156, 148, 148);
+}
+
+.branco {
+    background-color: honeydew;
+}
+
+.img1 {
+    background-image: url('Images/img1.png');
+}
+
+.img2 {
+    background-image: url('Images/img2.png')
+}
+
+.img3 {
+    background-image: url('Images/img3.png')
+}
+
+.img4 {
+    background-image: url('Images/img4.png')
+}
