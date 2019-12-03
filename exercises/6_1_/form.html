@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <fieldset>
+        <legend>Formulário</legend>
+        <label>Nome:</label>
+        <input type="text" required='required' maxlength="40" placeholder="Ex: Pedro Henrique"><br>
+        <label>E-mail:</label>
+        <input type="text" required='required' placeholder="nome@nome.nome" pattern="[A-Za-z]"><br>
+        <label>CPF:</label>
+        <input type='number' required='required' maxlength="11" placeholder="12345678900"><br>
+        <label>Endereço:</label>
+        <input type="text" required='required' maxlength="200"><br>
+        <label>Cidade:</label>
+        <input type='text' required='required' maxlength="28"><br>
+        <label>Estado:</label>
+        <select required='required' name='estado'>
+            <option selected='select'>Selecione o estado</option>
+        </select><br>
+        <label>Local:</label>
+        <label for:'casa'><input name='local' type="radio" value="c" id="casa">Casa</label>
+        <label for:'apartamento'><input name='local' type="radio" value="a" id="apartamento">apartamento</label>
+
+
+    </fieldset>
+    <script src="script.js"></script>
+</body>
+
+</html>
