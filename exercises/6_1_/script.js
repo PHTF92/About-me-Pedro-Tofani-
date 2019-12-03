@@ -27,3 +27,8 @@ enviar2.addEventListener('click', function () {
     if (arranjo[1] < 0 || arranjo[1] > 12) alert('O mês deve estar entre 1 e 12');
     if (arranjo[2] < 0) alert('Ano deve ser positivo');
 })
+
+let botao = document.getElementById('limpar')
+botao.addEventListener('click', function(){
+    window.location.reload();
+})
