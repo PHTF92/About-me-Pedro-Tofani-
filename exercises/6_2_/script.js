@@ -11,3 +11,5 @@ var picker = new Pikaday({
     yearRange: [2000, 2020]
 
 });
+
+validation.init("form");
