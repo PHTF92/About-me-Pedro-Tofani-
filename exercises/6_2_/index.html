@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/pikaday.css">
     <script type='text/javascript' src='js/jquery-3.4.1.min.js'></script>
     <script type='text/javascript' src='js/bootstrap.min.js'></script>
 </head>
@@ -84,8 +85,7 @@
                 </div>
                 <div>
                     <label>Data de início</label>
-                    <input class="form-control" id='dataDeComeco' type="text" required='required'
-                        pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}" title="dd/mm/yyyy">
+                    <input type="text" id="datepicker">
                 </div>
             </div>
             <div class="col">
@@ -98,6 +98,7 @@
     <div></div>
     <button id="limpar">Limpar!</button>
 
+    <script src="js/pikaday.js"></script>
     <script src="script.js"></script>
 </body>
 
