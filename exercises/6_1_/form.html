@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <fieldset>
+        <form>
+            <legend>Formulário 1</legend>
+            <label>Nome:</label>
+            <input type="text" required='required' maxlength="40" placeholder="Ex: Pedro Henrique"><br>
+            <label>E-mail:</label>
+            <input type="text" required='required' placeholder="nome@nome.nome" pattern="[a-z]*@[a-z]*\.[a-z]*"><br>
+            <label>CPF:</label>
+            <input type='number' required='required' maxlength="11" placeholder="12345678900"><br>
+            <label>Endereço:</label>
+            <input type="text" required='required' maxlength="200"><br>
+            <label>Cidade:</label>
+            <input type='text' required='required' maxlength="28"><br>
+            <label>Estado:</label>
+            <select required='required' name='estado'>
+                <option selected='select'>Selecione o estado</option>
+            </select><br>
+            <label>Local:</label>
+            <label for:'casa'><input name='local' type="radio" value="casa" id="casa">Casa</label>
+            <label for:'apartamento'><input name='local' type="radio" value="Apê" id="apartamento">apartamento</label><br>
+            <button type="submit">Enviar</button><br>
+        </form>
+    </fieldset>
+    <fieldset>
+        <form>
+            <legend>Formulário 2</legend>
+            <label>Resumo do currículo:</label>
+            <textarea maxlength="1000" type="textarea" required='required'></textarea><br>
+            <label>Cargo:</label>
+            <input type="text" maxlength="40" required='required'><br>
+            <label>Descrição do cargo</label>
+            <input type="text" maxlength="500" required='required'><br>
+            <label>Data de início</label>
+            <input id='dataDeComeco' type="text" required='required' pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}"
+                title="dd/mm/yyyy"><br>
+            <button type="submit">Enviar</button><br>
+        </form>
+    </fieldset>
+    <div></div>
+    <button id="limpar">Limpar!</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
