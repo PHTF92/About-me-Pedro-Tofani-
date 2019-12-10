@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.3</title>
+
+    <style>
+        div {
+            border-color: black;
+            border-style: solid;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .main-content {
+            background-color: yellow;
+        }
+
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .main-content .center-content p {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Exercício 3.3 - JavaEscripito </h1>
+    <div class="main-content">
+        <div class="center-content">
+            <p>Texto padrão do nosso site</p>
+            <p>-----</p>
+            <p>Trybe</p>
+        </div>
+    </div>
+    <script>
+
+        //Ex 1 
+        function trocar_p(texto) {
+            var trocarp = document.getElementsByTagName("p")[1];
+            return trocarp.innerHTML = texto;
+        }
+        trocar_p("Daqui 5 anos");
+
+        //Ex 2
+        function trocarVermelho(cor) {
+            var trocaDeCor = document.getElementsByClassName("main-content")[0];
+            return trocaDeCor.style.backgroundColor = cor;
+        }
+        trocarVermelho("green");
+
+        //Ex 3
+
+        function trocarBrancoCor(cor) {
+            var trocaDeCor = document.getElementsByClassName("center-content")[0];
+            return trocaDeCor.style.backgroundColor = cor;
+        }
+        trocarBrancoCor("white");
+
+        //Ex 4
+        function corrigirTexto(texto) {
+            var trocarh1 = document.getElementsByTagName("h1")[0];
+            return trocarh1.innerHTML = texto;
+        }
+        corrigirTexto("Exercício 4.3 - JavaEscript");
+
+        //Ex 5
+        function paraMaiusculo() {
+            for (let i = 0; i < 3; i++) {
+                document.getElementsByTagName("p")[i].innerHTML = document.getElementsByTagName("p")[i].innerHTML.toUpperCase();
+            }
+        }
+        paraMaiusculo();
+
+        //Ex6
+        function conteudo_p() {
+            for (let i = 0; i < 3; i++) {
+                console.log(document.getElementsByTagName('p')[i].innerHTML);
+            }
+        }
+        conteudo_p();
+    </script>
+</body>
+
+</html>
