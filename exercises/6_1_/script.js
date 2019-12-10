@@ -11,11 +11,10 @@ for (let i = 0; i < 27; i++) {
 }
 let enviar2 = document.getElementsByTagName('button')[1];
 enviar2.addEventListener('click', function () {
-    event.preventDefault();
     let caminhoInput = document.getElementsByTagName('input');
     let comprimento = caminhoInput.length;
     let divPai = document.getElementsByTagName('div')[0];
-    for (let i=0; i<comprimento; i++){
+    for (let i = 0; i < comprimento; i++) {
         let addDiv = document.createElement('div');
         addDiv.innerHTML = caminhoInput[i].value;
         divPai.appendChild(addDiv);
@@ -23,12 +22,21 @@ enviar2.addEventListener('click', function () {
     }
     let string = document.getElementById('dataDeComeco').value;
     let arranjo = string.split('/');
-    if (arranjo[0] < 0 || arranjo[0] > 31) alert('O dia do mês deve estar entre 1 e 31')
-    if (arranjo[1] < 0 || arranjo[1] > 12) alert('O mês deve estar entre 1 e 12');
-    if (arranjo[2] < 0) alert('Ano deve ser positivo');
+    if (arranjo[0] < 0 || arranjo[0] > 31) {
+        alert('O dia do mês deve estar entre 1 e 31');
+        event.preventDefault();
+    }
+    if (arranjo[1] < 0 || arranjo[1] > 12) {
+        alert('O mês deve estar entre 1 e 12');
+        event.preventDefault();
+    }
+    if (arranjo[2] < 0) {
+        alert('Ano deve ser positivo')
+        event.preventDefault();
+    };
 })
 
 let botao = document.getElementById('limpar')
-botao.addEventListener('click', function(){
+botao.addEventListener('click', function () {
     window.location.reload();
 })
