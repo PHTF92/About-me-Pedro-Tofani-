@@ -24,14 +24,21 @@ figure {
         font-size: 1em;
         margin: 5px;
     }
-
     .left {
         float: left;
         width: 45%;
     }
-
     .right {
         float: right;
         width: 45%;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    body {
+        background-color: red;
+        font-size: 0.9em;
+        margin: 0px;
+        max-width: auto;
     }
 }
