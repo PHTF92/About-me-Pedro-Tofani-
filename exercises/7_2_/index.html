@@ -74,17 +74,33 @@
         #exercise-1 {
             animation-delay: 1s;
             animation-duration: 3s;
-            animation-name: exercise-1;
+            animation-name: abcd;
             animation-iteration-count: infinite;
         }
 
-        @keyframes exercise-1 {
+        #exercise-2 {
+            animation-delay: 2s;
+            animation-duration: 2s;
+            animation-name: abcd;
+            animation-fill-mode: forwards;
+        }
+
+        #exercise-3 {
+            animation-delay: 1s;
+            animation-duration: 1s;
+            animation-name: abcd;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes abcd {
+
             from {
-                margin-left: 0;
+                margin-left: 0
             }
 
             to {
-                margin-left: 100%;
+                margin-left: 95%;
             }
         }
     </style>
