@@ -27,8 +27,30 @@ header nav ul {
     header p {
         background-color: silver;
     }
-
     body {
         font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    * {
+        margin: 2px;
+        text-align: justify;
+    }
+    footer {
+        font-size: 0.5em;
+    }
+    h1 {
+        font-size: 1.1em;
+    }
+    header nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+    header p {
+        text-align: center;
+        font-size: 1.1em;
+        font-weight: bold;
     }
 }
