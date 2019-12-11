@@ -93,6 +93,25 @@
             animation-iteration-count: infinite;
         }
 
+        #exercise-4 {
+            animation-duration: 5s;
+            animation-name: abcd;
+            animation-iteration-count: infinite;
+        }
+
+        #exercise-4:hover {
+            animation-play-state: paused;
+        }
+
+        #section-5 {
+            animation-duration: 5s;
+            animation-name: ex5;
+            animation-iteration-count: infinite;
+        }
+        #section-5:hover {
+            animation-play-state: paused;
+        }
+
         @keyframes abcd {
 
             from {
@@ -102,6 +121,10 @@
             to {
                 margin-left: 95%;
             }
+        }
+        @keyframes ex5 {
+            from {padding-left: 0px}
+            to {padding-left: 1100px}
         }
     </style>
 </head>
