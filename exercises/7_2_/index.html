@@ -108,8 +108,21 @@
             animation-name: ex5;
             animation-iteration-count: infinite;
         }
+
         #section-5:hover {
             animation-play-state: paused;
+        }
+
+        /* .justify-content__space-between {
+            animation-duration: 5s;
+            animation-name: ex6;
+            animation-iteration-count: infinite;
+        } */
+
+        #exercise-6-square:hover~#exercise-6 {
+            animation-duration: 5s;
+            animation-name: ex6;
+            animation-iteration-count: infinite;
         }
 
         @keyframes abcd {
@@ -122,9 +135,26 @@
                 margin-left: 95%;
             }
         }
+
         @keyframes ex5 {
-            from {padding-left: 0px}
-            to {padding-left: 1100px}
+            from {
+                padding-left: 0px
+            }
+
+            to {
+                padding-left: 1100px
+            }
+        }
+
+
+        @keyframes ex6 {
+            from {
+                margin-right: 1100px;
+            }
+
+            to {
+               margin-right: 5px
+            }
         }
     </style>
 </head>
