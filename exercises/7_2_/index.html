@@ -141,10 +141,52 @@
         }
 
         #exercise-10 {
-            animation-duration: 10s, 4s;
+            animation-duration: 10s;
             animation-name: ex7, ex9;
             animation-iteration-count: infinite;
             animation-direction: alternate;
+        }
+
+        #exercise-11_1,
+        #exercise-11_2,
+        #exercise-11_3,
+        #exercise-11_4,
+        #exercise-11_5 {
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-name: abcd;
+            animation-iteration-count: infinite;
+        }
+
+        #exercise-11_1 {
+            animation-timing-function: linear
+        }
+
+        #exercise-11_2 {
+            animation-timing-function: ease-in-out
+        }
+
+        #exercise-11_3 {
+            animation-timing-function: ease-in
+        }
+
+        #exercise-11_4 {
+            animation-timing-function: ease-out
+        }
+
+        #exercise-11_5 {
+            animation-timing-function: ease
+        }
+
+        #exercise-12 {
+            animation-duration: 2s;
+            animation-name: desaparecer;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+        }
+
+        #exercise-12:active {
+            animation-play-state: running;
         }
 
         @keyframes abcd {
@@ -212,6 +254,16 @@
 
             to {
                 background-color: green;
+            }
+        }
+
+        @keyframes desaparecer {
+            from {
+                opacity: 100%;
+            }
+
+            to {
+                opacity: 0;
             }
         }
     </style>
