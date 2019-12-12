@@ -113,16 +113,38 @@
             animation-play-state: paused;
         }
 
-        /* .justify-content__space-between {
-            animation-duration: 5s;
-            animation-name: ex6;
-            animation-iteration-count: infinite;
-        } */
 
         #exercise-6-square:hover~#exercise-6 {
             animation-duration: 5s;
             animation-name: ex6;
             animation-iteration-count: infinite;
+        }
+
+        #exercise-7 {
+            animation-duration: 10s;
+            animation-name: ex7;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #exercise-8 {
+            animation-duration: 4s;
+            animation-name: ex8;
+            animation-iteration-count: infinite;
+        }
+
+        #exercise-9 {
+            animation-duration: 4s;
+            animation-name: ex9;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #exercise-10 {
+            animation-duration: 10s, 4s;
+            animation-name: ex7, ex9;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
         }
 
         @keyframes abcd {
@@ -149,11 +171,47 @@
 
         @keyframes ex6 {
             from {
-                margin-right: 1100px;
+                margin-right: 1025px;
             }
 
             to {
-               margin-right: 5px
+                margin-right: 5px
+            }
+        }
+
+        @keyframes ex7 {
+            from {}
+
+            to {
+                padding-left: 1150px;
+            }
+        }
+
+        @keyframes ex8 {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: blue;
+            }
+        }
+
+        @keyframes ex9 {
+            from {
+                background-color: red;
+            }
+
+            25% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            to {
+                background-color: green;
             }
         }
     </style>
