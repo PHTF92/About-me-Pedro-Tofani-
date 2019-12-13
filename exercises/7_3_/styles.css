@@ -1,13 +1,10 @@
 * {
-    background-color: azure;
     margin: 0;
     padding: 0;
-    border: solid red 1px;
 }
 
 div {
     background-color: white;
-    height: 150px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -16,4 +13,57 @@ div {
 
 img {
     margin: 5px;
+    height: 220px;
+}
+
+.aumentar:hover {
+    animation: aumentar 5s ease-in infinite alternate;
+}
+
+.helice:hover {
+    animation: helice 3s linear infinite;
+}
+
+.translacao:hover {
+    animation: translacao 3s ease-out infinite alternate;
+}
+
+.skew:hover {
+    animation: skew 8s linear infinite alternate;
+}
+
+@keyframes aumentar {
+    0% {
+        transform: scale(0.5, 0.5);
+    }
+    100% {
+        transform: scale(1.5, 1.5);
+    }
+}
+
+@keyframes helice {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes translacao {
+    0% {
+        transform: translate(15px, 5px);
+    }
+    100% {
+        transform: translate(75px, 45px);
+    }
+}
+
+@keyframes skew {
+    0% {
+        transform: skew(0deg);
+    }
+    100% {
+        transform: skew(60deg);
+    }
 }
