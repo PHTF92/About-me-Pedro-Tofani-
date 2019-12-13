@@ -1,0 +1,19 @@
+* {
+    background-color: azure;
+    margin: 0;
+    padding: 0;
+    border: solid red 1px;
+}
+
+div {
+    background-color: white;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+img {
+    margin: 5px;
+}
