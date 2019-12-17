@@ -28,6 +28,7 @@ function gerarBolas() {
 }
 
 function reiniciar() {
+    document.getElementById('resposta').innerHTML = ''
     colorirBolas();
     input[0].value = '';
     pontuacao[0].innerHTML = 'Placar: ';
@@ -68,6 +69,7 @@ function adicionarBolas(numeroBolas) {
 
 function clicarBola() {
     if (this.style.backgroundColor == document.getElementsByTagName('h3')[0].innerText) {
+        document.getElementById('resposta').innerHTML = 'Boa! Acertou a cor!'
         nPontos += 3;
         contadorPositivo += 1;
         contadorNegativo = 0;
@@ -77,6 +79,7 @@ function clicarBola() {
         else { };
     }
     else {
+        document.getElementById('resposta').innerHTML = 'Errou a cor!'
         nPontos -= 1;
         contadorNegativo += 1;
         contadorPositivo = 0;
