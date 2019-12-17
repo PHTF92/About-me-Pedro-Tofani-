@@ -39,7 +39,7 @@ clickLetraBaixo.addEventListener('click', tamanhoLetra);
 clickLetraCima.addEventListener('click', tamanhoLetra);
 function tamanhoLetra() {
     if (this.id == 'letraCima') {
-        if (selecionarTexto[0].offsetHeight < 380 && selecionarTexto[1].offsetHeight < 380) {
+        if (selecionarTexto[0].offsetHeight < 300 && selecionarTexto[1].offsetHeight < 300) {
             selecionarTexto[0].style.fontSize = (parseInt(selecionarTexto[0].style.fontSize) + 10 + 'px');
             selecionarTexto[1].style.fontSize = (parseInt(selecionarTexto[1].style.fontSize) + 10 + 'px');
         }
@@ -59,14 +59,20 @@ textoCima.addEventListener('input', parteCima);
 function parteCima() {
     let selecionarTextoNoMeme = document.getElementById('escritoCima')
     selecionarTextoNoMeme.innerHTML = textoCima.value
-    if (selecionarTextoNoMeme.innerHTML.length > 100) alert('Você não está escrevendo uma bíblia!')
+    if (selecionarTextoNoMeme.innerHTML.length > 100) {
+        alert('Você não está escrevendo uma bíblia!');
+        let cortado = selecionarTextoNoMeme.innerHTML.slice(0, -1);
+        textoCima.value = cortado;
+    }
 }
 
 textoBaixo.addEventListener('input', parteBaixo)
 function parteBaixo() {
     let selecionarTextoNoMeme = document.getElementById('escritoBaixo')
     selecionarTextoNoMeme.innerHTML = textoBaixo.value
-    if (selecionarTextoNoMeme.innerHTML.length > 100) alert('Você não está escrevendo uma bíblia!');
+    if (selecionarTextoNoMeme.innerHTML.length > 100) {
+        alert('Você não está escrevendo uma bíblia!')
+        let cortado = selecionarTextoNoMeme.innerHTML.slice(0, -1);
+        textoBaixo.value = cortado;
+    }
 }
-
-
