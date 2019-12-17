@@ -13,8 +13,9 @@ botao.addEventListener('click', gerarCarta);
 function gerarCarta() {
     limparDivs();
     criarEstilo();
-    let selectTexto = document.getElementsByTagName('input')[0];
-    let texto = selectTexto.value;
+    let selectTexto = document.getElementsByTagName('input')[0].value;
+    let texto = selectTexto.replace(/[ ]{2,}/gi, " ");
+    texto = texto.replace(/(^\s*)|(\s*$)/gi,"");
     let arranjoTexto = texto.split(' ');
     let comprimento = arranjoTexto.length;
     for (let i = 0; i < comprimento; i++) {
@@ -95,7 +96,7 @@ function corFundo(j) {
     arranjoEstilo[4] = (j == 1 ? 'cinza' : 'branco')
 }
 
-function alterarEstilo(){
+function alterarEstilo() {
     criarEstilo();
     this.className = '';
     this.classList.add(arranjoEstilo[0]);
