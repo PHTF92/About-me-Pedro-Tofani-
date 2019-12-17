@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercícios 7.3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 90%;
+            height: 100px;
+            border: 1px solid red;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .flex-direction__column {
+            flex-direction: column;
+        }
+
+        .justify-content__space-between {
+            justify-content: space-between;
+        }
+
+        .justify-content__center {
+            justify-content: center;
+        }
+
+        .align-items__flex-start {
+            align-items: flex-start;
+        }
+
+        .automatic-box-height {
+            height: auto;
+        }
+
+        .ball {
+            border-radius: 100%;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+        .medium {
+            width: 50px;
+            height: 50px;
+        }
+
+        #exercise-1 {
+            animation-delay: 1s;
+            animation-duration: 3s;
+            animation-name: abcd;
+            animation-iteration-count: infinite;
+        }
+
+        #exercise-2 {
+            animation-delay: 2s;
+            animation-duration: 2s;
+            animation-name: abcd;
+            animation-fill-mode: forwards;
+        }
+
+        #exercise-3 {
+            animation-delay: 1s;
+            animation-duration: 1s;
+            animation-name: abcd;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #exercise-4 {
+            animation-duration: 5s;
+            animation-name: abcd;
+            animation-iteration-count: infinite;
+        }
+
+        #exercise-4:hover {
+            animation-play-state: paused;
+        }
+
+        #section-5 {
+            animation-duration: 5s;
+            animation-name: ex5;
+            animation-iteration-count: infinite;
+        }
+
+        #section-5:hover {
+            animation-play-state: paused;
+        }
+
+
+        #exercise-6-square:hover~#exercise-6 {
+            animation-duration: 5s;
+            animation-name: ex6;
+            animation-iteration-count: infinite;
+        }
+
+        #exercise-7 {
+            animation-duration: 10s;
+            animation-name: ex7;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #exercise-8 {
+            animation-duration: 4s;
+            animation-name: ex8;
+            animation-iteration-count: infinite;
+        }
+
+        #exercise-9 {
+            animation-duration: 4s;
+            animation-name: ex9;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #exercise-10 {
+            animation-duration: 10s;
+            animation-name: ex7, ex9;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #exercise-11_1,
+        #exercise-11_2,
+        #exercise-11_3,
+        #exercise-11_4,
+        #exercise-11_5 {
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-name: abcd;
+            animation-iteration-count: infinite;
+        }
+
+        #exercise-11_1 {
+            animation-timing-function: linear
+        }
+
+        #exercise-11_2 {
+            animation-timing-function: ease-in-out
+        }
+
+        #exercise-11_3 {
+            animation-timing-function: ease-in
+        }
+
+        #exercise-11_4 {
+            animation-timing-function: ease-out
+        }
+
+        #exercise-11_5 {
+            animation-timing-function: ease
+        }
+
+        #exercise-12 {
+            animation-duration: 2s;
+            animation-name: desaparecer;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+        }
+
+        #exercise-12:active {
+            animation-play-state: running;
+        }
+
+        @keyframes abcd {
+
+            from {
+                margin-left: 0
+            }
+
+            to {
+                margin-left: 95%;
+            }
+        }
+
+        @keyframes ex5 {
+            from {
+                padding-left: 0px
+            }
+
+            to {
+                padding-left: 1100px
+            }
+        }
+
+
+        @keyframes ex6 {
+            from {
+                margin-right: 1025px;
+            }
+
+            to {
+                margin-right: 5px
+            }
+        }
+
+        @keyframes ex7 {
+            from {}
+
+            to {
+                padding-left: 1150px;
+            }
+        }
+
+        @keyframes ex8 {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: blue;
+            }
+        }
+
+        @keyframes ex9 {
+            from {
+                background-color: red;
+            }
+
+            25% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            to {
+                background-color: green;
+            }
+        }
+
+        @keyframes desaparecer {
+            from {
+                opacity: 100%;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>
+            <section>
+                <div id="exercise-1" class="ball green medium"></div>
+            </section>
+        </li>
+        <li>
+            <section>
+                <div id="exercise-2" class="ball green medium"></div>
+            </section>
+        </li>
+        <li>
+            <section>
+                <div id="exercise-3" class="ball green medium"></div>
+            </section>
+        </li>
+        <li>
+            <section>
+                <div id="exercise-4" class="ball green medium"></div>
+            </section>
+        </li>
+        <li>
+            <section id="section-5">
+                <div id="exercise-5" class="ball green medium"></div>
+            </section>
+        </li>
+        <li>
+            <section class="justify-content__space-between">
+                <div id="exercise-6-square" class="blue medium"></div>
+                <div id="exercise-6" class="ball green medium"></div>
+            </section>
+        </li>
+        <li>
+            <section class="justify-content__center">
+                <div id="exercise-7" class="blue medium"></div>
+            </section>
+        </li>
+        <li>
+            <section class="justify-content__center">
+                <div id="exercise-8" class="red medium"></div>
+            </section>
+        </li>
+        <li>
+            <section class="justify-content__center">
+                <div id="exercise-9" class="red medium"></div>
+            </section>
+        </li>
+        <li>
+            <section class="justify-content__center">
+                <div id="exercise-10" class="red medium"></div>
+            </section>
+        </li>
+        <li>
+            <section class="flex-direction__column align-items__flex-start automatic-box-height">
+                <div id="exercise-11_1" class="red medium"></div>
+                <div id="exercise-11_2" class="blue medium"></div>
+                <div id="exercise-11_3" class="green medium"></div>
+                <div id="exercise-11_4" class="yellow medium"></div>
+                <div id="exercise-11_5" class="black medium"></div>
+            </section>
+        </li>
+        <li>
+            <section class="justify-content__center">
+                <div id="exercise-12" class="black medium"></div>
+            </section>
+        </li>
+    </ol>
+</body>
+
+</html>
