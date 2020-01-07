@@ -30,3 +30,24 @@ const maiorPalavra = c => {
 }
 
 console.log(maiorPalavra("Antônio foi no banheiro e não sabemos o que acontxxxeceu"));
+
+//Parte 2 ex 4
+const skills = [" JS", " CSS", " HTML", " Soft Skill", " Hard Skill"];
+const skillsOrdenados = skills.sort();
+const inicial = `Tryber x aqui!
+Tudo bem?`
+const saudacao = (a, b) => {
+    const substituicao = b.replace('x', a);
+    return substituicao
+}
+
+const func2 = (a, b) => {
+    resultado = `${a}
+    Minhas 5 habilidades são: ${b}
+    Go Trybe`
+    return resultado
+}
+
+console.log(saudacao("Pedro", inicial));
+console.log(skillsOrdenados)
+console.log(func2(saudacao("Pedro", inicial), skillsOrdenados))
