@@ -1,8 +1,41 @@
 * {
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+div {
+    margin: 5px;
+}
+
+button {
+    display: block;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    text-align: center;
+}
+
+.entradaJogador {
+    border: 1px solid black;
+    width: 28%;
+}
+
+.blocoJogador {
+    display: flex;
+    justify-content: space-around;
 }
