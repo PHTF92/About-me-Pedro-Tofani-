@@ -32,6 +32,16 @@ const maiorPalavra = c => {
 
 console.log(maiorPalavra("Antônio foi no banheiro e não sabemos o que acontxxxeceu"));
 
+//Parte 2 ex3
+const botao = document.getElementsByTagName('button')[0];
+let i = 0;
+botao.addEventListener('click', () => {
+    i +=1;
+    document.getElementsByTagName('p')[0].innerText = i;
+})
+
+
+
 //Parte 2 ex 4
 const skills = [" JS", " CSS", " HTML", " Soft Skill", " Hard Skill"];
 const skillsOrdenados = skills.sort();
