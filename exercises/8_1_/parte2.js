@@ -9,3 +9,9 @@ const fatorial = a => {
 }
 
 console.log(`O fatorial é ${fatorial(1)}`);
+
+const fatorialRecursivo = b => {
+    return resultado = b > 1 ? b * fatorialRecursivo(b - 1) : 1
+}
+
+console.log(fatorialRecursivo(5));
