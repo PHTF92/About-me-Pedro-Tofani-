@@ -19,13 +19,14 @@ console.log(fatorialRecursivo(5));
 
 const maiorPalavra = c => {
     const arranjoPalavras = c.split(' ');
-    let maiorPalavra = arranjoPalavras[0];
-    for (let i = 0; i < arranjoPalavras.length - 1; i++) {
-        if (arranjoPalavras[i].length > arranjoPalavras[i + 1].length) {
+    let maiorPalavra = null;
+    let tamanho = 0
+    for (let i = 0; i < arranjoPalavras.length; i++) {
+        if (arranjoPalavras[i].length > tamanho) {
+            tamanho = arranjoPalavras[i].length
             maiorPalavra = arranjoPalavras[i]
         }
     }
-    if (maiorPalavra.length < arranjoPalavras[arranjoPalavras.length - 1].length) { maiorPalavra = arranjoPalavras[arranjoPalavras.length - 1] };
     return maiorPalavra;
 }
 
