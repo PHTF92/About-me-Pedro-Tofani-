@@ -57,7 +57,7 @@ input {
 
 .caixa {
     border: solid 1px black;
-    margin: 20px;
+    margin: 0px;
     padding: 0;
     height: 40px;
     background-color: white;
