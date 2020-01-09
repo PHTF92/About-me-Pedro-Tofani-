@@ -76,10 +76,6 @@ const expected_result = {
 
 function longestNamedBook() {
     // escreva seu código aqui
-    const arranjo = [];
-    // let livros = books.map(elem => elem.name + arranjo)
-    // livroSelecionado = books.find(elem => elem.name == livros.reduce((acumulado, proximo) => 
-    // (acumulado.length > proximo.length) ? acumulado : proximo))
     livroSelecionado = books.reduce((acumulado, proximo) => (acumulado.name.length > proximo.name.length) ? acumulado : proximo)
 
     return livroSelecionado;
