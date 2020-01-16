@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Web Storage</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -19,25 +20,25 @@
 
     <form>
         <p>Cor do fundo</p>
-        <input type="radio" value="Azul" name="corFundo"><span>Azul</span>
-        <input type="radio" value="Vermelho" name="corFundo"><span>Vermelho</span>
+        <input type="radio" value="blue" name="corFundo" onclick="fcorFundo(this.value)"><span>Azul</span>
+        <input type="radio" value="red" name="corFundo" onclick="fcorFundo(this.value)"><span>Vermelho</span>
         <p>Cor do texto</p>
-        <input type="radio" value="Azul" name="cortexto"><span>Azul</span>
-        <input type="radio" value="Preto" name="cortexto"><span>Preto</span>
+        <input type="radio" value="blue" name="cortexto" onclick="fcorTexto(this.value)"><span>Azul</span>
+        <input type="radio" value="black" name="cortexto" onclick="fcorTexto(this.value)"><span>Preto</span>
         <p>Tamanho da fonte</p>
-        <input>
+        <input id="tamanhoFonte"><button onclick="ftamanhoFonte()">Enter</button>
         <p>Espaçamento das linhas</p>
-        <input type="radio" value="Grande" name="espLinhas"><span>Grande</span>
-        <input type="radio" value="Pequeno" name="espLinhas"><span>Pequeno</span>
+        <input type="radio" value="Grande" name="espLinhas" onclick="fespLinhas(15)"><span>Grande</span>
+        <input type="radio" value="Pequeno" name="espLinhas" onclick="fespLinhas(5)"><span>Pequeno</span>
         <p>Tipo da fonte</p>
-        <select id="corBorda">
+        <select id="tipoFonte" onchange="ftipoFonte(this.value)">
             <option value="Arial">Arial</option>
             <option value="Times New Roman">Times New Roman</option>
             <option value="Helvética">Helvética</option>
         </select>
-        <p><input type="submit" value="Submit"></p>
+        <p><input id='submit' type="submit" value="Submit"></p>
     </form>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
