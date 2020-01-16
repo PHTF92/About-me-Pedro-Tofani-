@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Web Storage</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -28,13 +27,13 @@
         <p>Tamanho da fonte</p>
         <input id="tamanhoFonte"><button onclick="ftamanhoFonte()">Enter</button>
         <p>Espaçamento das linhas</p>
-        <input type="radio" value="Grande" name="espLinhas" onclick="fespLinhas(15)"><span>Grande</span>
-        <input type="radio" value="Pequeno" name="espLinhas" onclick="fespLinhas(5)"><span>Pequeno</span>
+        <input type="radio" value="3" name="espLinhas" onclick="fespLinhas(this.value)"><span>Grande</span>
+        <input type="radio" value="1" name="espLinhas" onclick="fespLinhas(this.value)"><span>Pequeno</span>
         <p>Tipo da fonte</p>
         <select id="tipoFonte" onchange="ftipoFonte(this.value)">
-            <option value="Arial">Arial</option>
-            <option value="Times New Roman">Times New Roman</option>
-            <option value="Helvética">Helvética</option>
+            <option value='"Courier New", Courier, monospace'>Courier new</option>
+            <option value="Times New Roman, Times, serif">Times New Roman</option>
+            <option value="Arial, Helvetica, sans-serif">Arial</option>
         </select>
         <p><input id='submit' type="submit" value="Submit"></p>
     </form>
