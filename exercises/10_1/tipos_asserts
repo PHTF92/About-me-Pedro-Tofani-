@@ -1,0 +1,5 @@
+assert.equal()
+assert.deepStrictEqual()
+assert.notEqual()
+assert.ok()
+assert.fail()
