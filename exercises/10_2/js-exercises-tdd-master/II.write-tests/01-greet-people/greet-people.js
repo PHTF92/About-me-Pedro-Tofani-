@@ -7,6 +7,7 @@ function greetPeople(people) {
 
   return greeting;
 }
+console.log(greetPeople(['Irina', 'Ashleigh', 'Etza']))
 
 module.exports = greetPeople;
 
