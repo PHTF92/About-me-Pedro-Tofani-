@@ -22,6 +22,7 @@ function removeVowels(word) {
 
 module.exports = removeVowels;
 
+console.log(removeVowels('samuel'))
 /*
   Let's trace this piece of code - what is the value of result with this input
 
