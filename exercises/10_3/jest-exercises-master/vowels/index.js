@@ -8,7 +8,8 @@
 //   vowels('Why?') --> 0
 
 function vowels(str) {
-
+    const arranjo = str.replace(/(a|e|i|o|u)/gi, '')
+    return (str.length - arranjo.length)
 }
 
 module.exports = vowels;
