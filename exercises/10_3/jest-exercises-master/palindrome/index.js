@@ -8,7 +8,17 @@
 //   palindrome("abcdefg") === false
 
 function palindrome(str) {
-
+    const stringNome = str.split('')
+    const novaStr = [];
+    stringNome.forEach(letra => {
+        novaStr.unshift(letra)
+    })
+    console.log(stringNome.join(''))
+    console.log(stringNome)
+    console.log(novaStr)
+    return (stringNome.join() === novaStr.join())
 }
+
+console.log(palindrome('arara'))
 
 module.exports = palindrome;
