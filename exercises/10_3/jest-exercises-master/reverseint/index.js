@@ -9,7 +9,19 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
-
+    const arrNum = n.toString().split('');
+    const novoArrNum = []
+    arrNum.forEach(numero => {
+        novoArrNum.unshift(numero)
+    })
+    if (n < 0) {
+        novoArrNum.pop();
+        novoArrNum.unshift('-');
+    }
+    console.log(parseInt(novoArrNum.join('')))
+    return parseInt(novoArrNum.join(''))
 }
+
+reverseInt(-5)
 
 module.exports = reverseInt;
