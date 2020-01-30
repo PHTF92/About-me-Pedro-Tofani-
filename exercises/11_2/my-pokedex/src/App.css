@@ -2,6 +2,20 @@
   text-align: center;
 }
 
+.pokemon {
+  border: solid 1px red;
+  height: 350px;
+  width: 45%;
+  margin: 20px
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
