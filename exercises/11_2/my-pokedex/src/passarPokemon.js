@@ -1,10 +1,13 @@
 import React from 'react';
-import pokemons from './data.js'
+import CriarCard from './criarCard.js'
 
 class ImportarPokemon extends React.Component {
     render() {
+        const { pokemons } = this.props;
         return (
-            pokemons.map(pokemon => <div className='pokemon'>{pokemon.name}</div>)
+            <div className='arruamarCards'>
+                {pokemons.map((pokemon, index) => <CriarCard key={index} pokemon={pokemon} />)}
+            </div>
         )
     }
 }
