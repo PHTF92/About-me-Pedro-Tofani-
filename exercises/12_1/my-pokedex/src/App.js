@@ -9,18 +9,28 @@ class App extends React.Component {
     super(props);
     this.state = {
       pokemon: pokemons[0],
-      pokemonFilter: 'all'
+      pokemonFilter: '',
+      disabled: false
     }
   }
   proximoCard = () => {
-    let a = pokemons.indexOf(this.state.pokemon)
-    if (a === pokemons.length - 1) a = -1;
+    const b = pokemons.filter(({ type }) => [type, ''].includes(this.state.pokemonFilter))
+    let a = b.indexOf(this.state.pokemon)
+    if (a === b.length - 1) a = -1;
     a += 1;
-    this.setState(() => ({ pokemon: pokemons[a] }))
+    this.setState(() => ({ pokemon: b[a] }))
+  }
+  setarFiltro = tipo => {
+    const tipoPokemon = pokemons.filter(({ type }) => [type, ''].includes(tipo))
+    if (tipoPokemon.length === 1) this.setState(() => ({ disabled: true }))
+    else this.setState(() => ({ disabled: false }))
+    this.setState(() => ({ pokemonFilter: tipo, pokemon: tipoPokemon[0] }))
+  }
+  zerarFiltro = () => {
+    this.setarFiltro('');
   }
 
   render() {
-    console.log(this.state)
     return (
       <div>
         <div className="App">
@@ -28,9 +38,9 @@ class App extends React.Component {
           <div className='container'>
             <CriarCard pokemom={this.state.pokemon} />
           </div>
-          <button>All</button>
-          <CriarTiposBotoes pokemons={pokemons} />
-          <button onClick={this.proximoCard}>Próximo</button>
+          <button onClick={this.zerarFiltro}>All</button>
+          <CriarTiposBotoes pokemons={pokemons} setarFiltro={this.setarFiltro} />
+          <button onClick={this.proximoCard} disabled={this.state.disabled}>Próximo</button>
         </div>
       </div>
     );
