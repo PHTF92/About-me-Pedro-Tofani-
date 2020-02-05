@@ -16,17 +16,27 @@ class App extends React.Component {
       curriculo: '',
       cargo: '',
       descricao: '',
-      formErrors: { email: '', password: '' }
+      formErrors: { email: '' }
     }
   }
   changeHandler = event => {
-    const { name, value } = event.target;
-    this.setState(() => {
+    let { name, value } = event.target;
+    if (name === 'endereco') value = this.validarEndereco(value)
+    this.setState((state) => {
       return ({
-        [name]: value
+        [name]: value,
+        formErrors: {
+          ...state.formErrors,
+          [name]: this.validarCampo(name, value)
+        }
       })
     })
   }
+  handlerBlur = event => {
+    let { value } = event.target;
+    value = value.match(/^\d/) ? this.setState({ cidade: '' }) : this.setState({ cidade: value })
+  }
+  validarEndereco = endereco => endereco.replace(/[^\w\s]/gi, '')
   limparCampos = () => {
     this.setState({
       email: '',
@@ -41,6 +51,15 @@ class App extends React.Component {
       cargo: '',
       descricao: ''
     })
+  }
+  validarCampo(campo, value) {
+    switch (campo) {
+      case 'email':
+        const isValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
+        return isValid ? '' : ' is invalid';
+      default:
+        break;
+    }
   }
   render() {
     console.log(this.state)
@@ -57,7 +76,7 @@ class App extends React.Component {
             maxLength="40"
             type='text'
             name='nome'
-            value={this.state.nome}
+            value={this.state.nome.toUpperCase()}
             onChange={this.changeHandler}
             required='required'
           /></div>
@@ -91,6 +110,7 @@ class App extends React.Component {
             name='cidade'
             value={this.state.cidade}
             onChange={this.changeHandler}
+            onBlur={this.handlerBlur}
             required='required'
           /></div>
           <div>Estado
