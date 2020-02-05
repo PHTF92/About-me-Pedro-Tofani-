@@ -12,7 +12,7 @@ class App extends React.Component {
       endereco: '',
       cidade: '',
       estado: '',
-      tipo: '',
+      local: '',
       curriculo: '',
       cargo: '',
       descricao: '',
@@ -27,8 +27,28 @@ class App extends React.Component {
       })
     })
   }
+  limparCampos = () => {
+    this.setState({
+      email: '',
+      password: '',
+      nome: '',
+      cpf: '',
+      endereco: '',
+      cidade: '',
+      estado: '',
+      local: '',
+      curriculo: '',
+      cargo: '',
+      descricao: ''
+    })
+  }
   render() {
     console.log(this.state)
+    const estados = ['Acre (AC)', 'Alagoas (AL)', 'Amapá (AP)', 'Amazonas (AM)', 'Bahia (BA)', 'Ceará (CE)',
+      'Distrito Federal (DF)', 'Espírito Santo (ES)', 'Goiás (GO)', 'Maranhão (MA)', 'Mato Grosso (MT)',
+      'Mato Grosso do Sul (MS)', 'Minas Gerais (MG)', 'Pará (PA)', 'Paraíba (PB)', 'Paraná (PR)', 'Pernambuco (PE)',
+      'Piauí (PI)', 'Rio de Janeiro (RJ)', 'Rio Grande do Norte (RN)', 'Rio Grande do Sul (RS)', 'Rondônia (RO)', 'Roraima (RR)',
+      'Santa Catarina (SC)', 'São Paulo (SP)', 'Sergipe (SE)', 'Tocantins (TO)']
     return (
       <div>
         <fieldset>
@@ -63,17 +83,24 @@ class App extends React.Component {
             value={this.state.cidade}
             onChange={this.changeHandler}
           /></div>
-          <div>Estado</div>
-          <div></div>
+          <div>Estado
+            <select required='required' name='estado' value={this.state.estado} onChange={this.changeHandler}>
+              <option value=''>Selecione o estado</option>
+              {estados.map(estado => <option key={estado}>{estado}</option>)}
+            </select></div>
+          <div>
+            <input name='local' type="radio" value="casa" onChange={this.changeHandler} checked={this.state.local === 'casa'}></input><div>Casa</div>
+            <input name='local' type="radio" value="ape" onChange={this.changeHandler} checked={this.state.local === 'ape'}></input><div>Apartamento</div>
+          </div>
         </fieldset>
         <fieldset>
           <legend>Informações profissionais</legend>
-          <div>Resumo do currículo <textarea></textarea></div>
-          <div>Cargo <textarea></textarea></div>
-          <div>Descrição do cargo <textarea></textarea></div>
+          <div>Resumo do currículo <textarea name='curriculo' onChange={this.changeHandler}></textarea></div>
+          <div>Cargo <textarea name='cargo' onChange={this.changeHandler}></textarea></div>
+          <div>Descrição do cargo <textarea name='descricao' onChange={this.changeHandler}></textarea></div>
         </fieldset>
         <button>Submeter!</button><br></br>
-        <button>Limpar</button>
+        <button onClick={this.limparCampos}>Limpar</button>
       </div>
     );
   }
