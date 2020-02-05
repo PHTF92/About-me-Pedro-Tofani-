@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import CriarDiv from './CriarDiv.js'
 
 class App extends React.Component {
   constructor(props) {
@@ -70,6 +71,10 @@ class App extends React.Component {
       this.setState({ entrouJa: true })
     }
   }
+  passarInfos = () => {
+    const chaves = Object.keys(this.state)
+    this.setState({ estadoAtual: chaves })
+  }
   render() {
     console.log(this.state)
     const estados = ['Acre (AC)', 'Alagoas (AL)', 'Amapá (AP)', 'Amazonas (AM)', 'Bahia (BA)', 'Ceará (CE)',
@@ -138,8 +143,9 @@ class App extends React.Component {
           <div>Cargo <textarea onMouseEnter={this.mouseEnter} name='cargo' maxLength="40" required='required' onChange={this.changeHandler}></textarea></div>
           <div>Descrição do cargo <textarea maxLength="500" required='required' name='descricao' onChange={this.changeHandler}></textarea></div>
         </fieldset>
-        <button>Submeter!</button><br></br>
+        <button onClick={this.passarInfos}>Submeter!</button><br></br>
         <button onClick={this.limparCampos}>Limpar</button>
+        <CriarDiv estadoAtual={this.state.estadoAtual} estado={this.state}/>
       </div>
     );
   }
