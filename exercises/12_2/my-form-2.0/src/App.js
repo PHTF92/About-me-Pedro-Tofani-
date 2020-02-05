@@ -21,7 +21,7 @@ class App extends React.Component {
   }
   changeHandler = event => {
     const { name, value } = event.target;
-    this.setState((state) => {
+    this.setState(() => {
       return ({
         [name]: value
       })
@@ -54,34 +54,44 @@ class App extends React.Component {
         <fieldset>
           <legend>Formulário</legend>
           <div>Nome <input
+            maxLength="40"
             type='text'
             name='nome'
             value={this.state.nome}
             onChange={this.changeHandler}
+            required='required'
           /></div>
           <div>E-mail <input
+            maxLength="50"
             type='email'
             name='email'
             value={this.state.email}
             onChange={this.changeHandler}
+            required='required'
           /></div>
           <div>CPF <input
             type='number'
+            maxLength="11"
             name='cpf'
             value={this.state.cpf}
             onChange={this.changeHandler}
+            required='required'
           /></div>
           <div>Endereço <input
+            maxLength="200"
             type='text'
             name='endereco'
             value={this.state.endereco}
             onChange={this.changeHandler}
+            required='required'
           /></div>
           <div>Cidade <input
+            maxLength="28"
             type='text'
             name='cidade'
             value={this.state.cidade}
             onChange={this.changeHandler}
+            required='required'
           /></div>
           <div>Estado
             <select required='required' name='estado' value={this.state.estado} onChange={this.changeHandler}>
@@ -95,9 +105,9 @@ class App extends React.Component {
         </fieldset>
         <fieldset>
           <legend>Informações profissionais</legend>
-          <div>Resumo do currículo <textarea name='curriculo' onChange={this.changeHandler}></textarea></div>
-          <div>Cargo <textarea name='cargo' onChange={this.changeHandler}></textarea></div>
-          <div>Descrição do cargo <textarea name='descricao' onChange={this.changeHandler}></textarea></div>
+          <div>Resumo do currículo <textarea maxLength="1000" required='required' name='curriculo' onChange={this.changeHandler}></textarea></div>
+          <div>Cargo <textarea name='cargo' maxLength="40" required='required' onChange={this.changeHandler}></textarea></div>
+          <div>Descrição do cargo <textarea maxLength="500" required='required' name='descricao' onChange={this.changeHandler}></textarea></div>
         </fieldset>
         <button>Submeter!</button><br></br>
         <button onClick={this.limparCampos}>Limpar</button>
