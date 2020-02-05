@@ -16,6 +16,7 @@ class App extends React.Component {
       curriculo: '',
       cargo: '',
       descricao: '',
+      entrouJa: false,
       formErrors: { email: '' }
     }
   }
@@ -34,7 +35,8 @@ class App extends React.Component {
   }
   handlerBlur = event => {
     let { value } = event.target;
-    value = value.match(/^\d/) ? this.setState({ cidade: '' }) : this.setState({ cidade: value })
+    const novoValor = value.match(/^\d/) ? '' : value
+    this.setState({ cidade: novoValor })
   }
   validarEndereco = endereco => endereco.replace(/[^\w\s]/gi, '')
   limparCampos = () => {
@@ -49,7 +51,8 @@ class App extends React.Component {
       local: '',
       curriculo: '',
       cargo: '',
-      descricao: ''
+      descricao: '',
+      formErrors: { email: '' }
     })
   }
   validarCampo(campo, value) {
@@ -59,6 +62,12 @@ class App extends React.Component {
         return isValid ? '' : ' is invalid';
       default:
         break;
+    }
+  }
+  mouseEnter = () => {
+    if (this.state.entrouJa === false) {
+      alert('Preencha com cuidado esta informação');
+      this.setState({ entrouJa: true })
     }
   }
   render() {
@@ -126,7 +135,7 @@ class App extends React.Component {
         <fieldset>
           <legend>Informações profissionais</legend>
           <div>Resumo do currículo <textarea maxLength="1000" required='required' name='curriculo' onChange={this.changeHandler}></textarea></div>
-          <div>Cargo <textarea name='cargo' maxLength="40" required='required' onChange={this.changeHandler}></textarea></div>
+          <div>Cargo <textarea onMouseEnter={this.mouseEnter} name='cargo' maxLength="40" required='required' onChange={this.changeHandler}></textarea></div>
           <div>Descrição do cargo <textarea maxLength="500" required='required' name='descricao' onChange={this.changeHandler}></textarea></div>
         </fieldset>
         <button>Submeter!</button><br></br>
