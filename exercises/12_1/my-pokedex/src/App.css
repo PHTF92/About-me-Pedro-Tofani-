@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+
+.arruamarCards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-around;
+}
+
