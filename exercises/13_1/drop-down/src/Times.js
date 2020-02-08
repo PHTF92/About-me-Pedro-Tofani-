@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Times extends React.Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class Times extends React.Component {
             )
         }
     }
-    
+
     render() {
         console.log(this.state)
         return (
@@ -40,6 +41,13 @@ class Times extends React.Component {
             </div>
         )
     }
+}
+
+Times.propTypes = {
+    children: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        item: PropTypes.string
+    })),
 }
 
 export default Times;
