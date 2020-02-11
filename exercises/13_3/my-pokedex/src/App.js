@@ -3,6 +3,10 @@ import './App.css';
 import pokemons from './data.js'
 import CriarCard from './criarCard.js'
 import CriarTiposBotoes from './criarTiposBotoes.js'
+import { BrowserRouter, Link, Route, Switch, Redirect } from "react-router-dom";
+import About from './About'
+import Notfound from './notfound'
+import PokemonStatus from './pokemonstatus'
 
 class App extends React.Component {
   constructor(props) {
@@ -29,20 +33,47 @@ class App extends React.Component {
   zerarFiltro = () => {
     this.setarFiltro('');
   }
+  links = () => {
+    return (
+      <ul>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/about'>About</Link></li>
+      </ul>
+
+    )
+  }
+
+  gerarAgenda = () => {
+    return (
+      <div>
+        <div className='container'>
+          <CriarCard pokemom={this.state.pokemon} />
+        </div>
+        <button onClick={this.zerarFiltro}>All</button>
+        <CriarTiposBotoes pokemons={pokemons} setarFiltro={this.setarFiltro} />
+        <button onClick={this.proximoCard} disabled={this.state.disabled}>Próximo</button>
+      </div>
+    )
+  }
 
   render() {
     return (
-      <div>
+      <BrowserRouter>
         <div className="App">
-          <h1>Pokedex</h1>
-          <div className='container'>
-            <CriarCard pokemom={this.state.pokemon} />
-          </div>
-          <button onClick={this.zerarFiltro}>All</button>
-          <CriarTiposBotoes pokemons={pokemons} setarFiltro={this.setarFiltro} />
-          <button onClick={this.proximoCard} disabled={this.state.disabled}>Próximo</button>
+          <h1>Pokedex!</h1>
+          {this.links()}
+          <Switch>
+            <Route path='/about' component={About} />
+            <Route exact path='/' component={this.gerarAgenda} />
+            <Route path='/pokemonstatus/'
+              render={(props) => (
+                <PokemonStatus {...props} pokemon={this.state.pokemon} />
+              )}
+            />
+            <Route component={Notfound} />
+          </Switch>
         </div>
-      </div>
+      </BrowserRouter>
     );
   }
 }
