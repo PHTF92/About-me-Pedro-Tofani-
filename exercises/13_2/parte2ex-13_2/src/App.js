@@ -7,7 +7,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       dogs: [],
-      nomedoDog: 'Rex'
+      nomedoDog: 'Rex',
+      atualizaComponet: true,
+      destruir: false
     };
   }
 
@@ -17,7 +19,6 @@ class App extends React.Component {
 
   colocarNoArray = (link, nomedoDog = 'Rex') => {
     const { dogs } = this.state;
-    console.log(dogs.length)
     if (dogs.length === 10) {
       dogs.shift();
     }
@@ -28,7 +29,17 @@ class App extends React.Component {
   criarDog = () => {
     fetch('https://dog.ceo/api/breeds/image/random', { headers: { Accept: "application/json" } })
       .then(response => response.json())
-      .then(data => { this.colocarNoArray(data.message, this.state.nomedoDog) })
+      .then(data => {
+        this.colocarNoArray(data.message, this.state.nomedoDog)
+        if (data.message.includes('terrier')) {
+          this.setState({ atualizaComponet: false })
+        }
+        else this.setState({ atualizaComponet: true })
+      })
+  }
+
+  shouldComponentUpdate() {
+    return this.state.atualizaComponet
   }
 
   RenderFiguraDog = () => {
@@ -37,13 +48,21 @@ class App extends React.Component {
     )
   }
 
+  destruir = () => {
+    this.setState({ destruir: !this.state.destruir })
+  }
+
+
   render() {
     console.log(this.state);
+    let renderDog = '';
+    if (!this.state.destruir) renderDog = <Dog cachorros={this.state.dogs} destruir={this.state.destruir} />
     return (
       <div className="App" >
         <button type='button' onClick={this.criarDog}>Doguitos</button>
+        <button type='button' onClick={this.destruir}>Salvar no Storage</button>
         <input onChange={this.inputHandler} />
-        <Dog cachorros={this.state.dogs} />
+        {renderDog}
       </div >
     );
   }
