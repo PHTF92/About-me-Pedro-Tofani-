@@ -1,1 +1,2 @@
-https://PHTF92.github.io/projetos/To-do-List/index.html
+A simple pure JS/CSS/HTML project to organize ypurs to-do's.
+https://phtf92.github.io/JS-CSS-HTML/To-do-List/index.html
