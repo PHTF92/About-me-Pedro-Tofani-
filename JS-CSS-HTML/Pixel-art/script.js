@@ -91,6 +91,13 @@ function gitHub() {
 function trybe() {
     let totalQuadrados = document.querySelectorAll('.colorivel').length;
     let totalLinha = Math.sqrt(totalQuadrados);
+    let valorComprimento = document.getElementById('tamanho').value;
+
+    if (valorComprimento !== '50') {
+      alert(valorComprimento)
+      alert('Escolha a opção de 50x50');
+      return '';
+    }
 
     for (let j = 0; j < totalLinha; j++) {
         for (let i = 0; i < totalLinha; i++) {

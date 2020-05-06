@@ -1,5 +1,6 @@
 body {
     background-color: rgb(226, 215, 215);
+    text-align: center;
 }
 
 header {
@@ -66,4 +67,8 @@ header {
     grid-template-rows: 40px 40px 40px 40px 40px;
     display: grid;
     justify-content: center;
+}
+
+button {
+  margin: 5px;
 }
