@@ -1,10 +1,13 @@
 body {
     background-color: blanchedalmond;
+    text-align: center;
 }
 
 section {
     margin: 5px;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 div {
